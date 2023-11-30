@@ -17,7 +17,7 @@ A Simple github Repo contains dumb learning the pythonlel.
 - Abandoned
 - Missingsomething
 
-# Running the server and client
+# Code of Conduct
 
 ### Prerequisites
 * Python
