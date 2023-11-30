@@ -1,2 +1,2 @@
 # pythonlel
-caeluslel
+caeluslel python learning resource Xd
