@@ -1,11 +1,49 @@
-# pythonlel
+# PythonLel
 
-caeluslel python learning resource Xd
+**_Language_**
+[EN](README.md)
 
-buat belajar basic nya ke folder Learning ada beberapa contoh buat mencakup dasaran python.
+#
+A Simple github Repo contains dumb learning the pythonlel.
+### Notable features
+- Learning
+- Example
+- Trial and Error
+- CaelusLel
+- Resource
+- Experimental
+- .vscode
+- Deprecated
+- Abandoned
+- Missingsomething
 
-buat nyari contoh implementasi beberapa aplikasi ke folder Example.
+# Running the server and client
 
-semua nya dibagi berdasarkan bagian bagian learning biar gampang paham.
+### Prerequisites
+* Python
+* Vscode
+* Python Extension Pack
+* Brain to Learn
+* Desire to Learn
+* MongoDB
+* Python Pip
+* Python Library
+* MySQL
+* Git
 
+### Recommended
+* A Laptop/PC that can run Idle Games like Star Rail and VSCode.
 
+### Steps
+1. Create Folder named anything.
+2. Open terminal inside Directory.
+3. Git clone https://CaelusLel/pythonlel.
+4. Now you have fully functional basic python example code.
+5. Learn by Trial and Error, Never be lazy.
+6. Happy Learning lel.
+
+### Notable Notes
+
+```
+GOOD LUCK 
+```
