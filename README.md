@@ -6,16 +6,16 @@
 #
 A Simple github Repo contains dumb learning the pythonlel.
 ### Notable features
-- Learning
-- Example
-- Trial and Error
-- CaelusLel
-- Resource
-- Experimental
-- .vscode
-- Deprecated
-- Abandoned
-- Missingsomething
+- Learning (Example of basic Python Understanding Code)
+- Example (Code Implementation)
+- Trial and Error (Ongoing Python Program)
+- CaelusLel (Finished Python Program)
+- Resource (Some Library that isn't widely available)
+- Experimental (Buggy Python Program)
+- .vscode (VsCode Settings)
+- Deprecated (Old Python Program that doesn't have update and support again)
+- Abandoned (f this i am out)
+- Missingsomething (A lot of erros on the code)
 
 # Code of Conduct
 
