@@ -2,8 +2,23 @@ import pymongo
 
 # Koneksi ke database MongoDB
 client = pymongo.MongoClient("mongodb://localhost:27017/")
-db = client["toko_makanan"]
-collection = db["menu_makanan"]
+db = client.get_database("toko_makanan")
+collection = db.get_collection("menu_makanan")
+
+# Fungsi untuk mengecek apakah database dan collection sudah ada
+def cek_database_collection():
+    if "toko_makanan" in client.list_database_names() and "menu_makanan" in db.list_collection_names():
+        return True
+    else:
+        return False
+
+# Fungsi untuk membuat database dan collection jika belum ada
+def buat_database_collection():
+    if not cek_database_collection():
+        db.create_collection("menu_makanan")
+        print("Database dan collection berhasil dibuat.")
+    else:
+        print("Database dan collection sudah ada.")
 
 # Fungsi untuk menampilkan menu makanan
 def tampilkan_menu():
@@ -68,35 +83,39 @@ def hitung_total_harga(pesanan):
     return total_harga
 
 # Contoh penggunaan fungsi-fungsi di atas
-while True:
-    print("\n=== Toko Makanan ===")
-    print("1. Tampilkan Menu")
-    print("2. Tambahkan Menu")
-    print("3. Hapus Menu")
-    print("4. Update Harga")
-    print("5. Cari Menu Berdasarkan Harga")
-    print("6. Hitung Total Harga Pesanan")
-    print("0. Keluar")
+if __name__ == "__main__":
+    buat_database_collection()
 
-    pilihan = input("Masukkan pilihan: ")
+    while True:
+        print("\n=== Toko Makanan ===")
+        print("1. Tampilkan Menu")
+        print("2. Tambahkan Menu")
+        print("3. Hapus Menu")
+        print("4. Update Harga")
+        print("5. Cari Menu Berdasarkan Harga")
+        print("6. Hitung Total Harga Pesanan")
+        print("0. Keluar")
 
-    if pilihan == "1":
-        tampilkan_menu()
-    elif pilihan == "2":
-        tambahkan_menu()
-    elif pilihan == "3":
-        hapus_menu()
-    elif pilihan == "4":
-        update_harga()
-    elif pilihan == "5":
-        cari_menu()
-    elif pilihan == "6":
-        pesanan = input("Masukkan pesanan (pisahkan dengan koma): ").split(",")
-        total_harga = hitung_total_harga(pesanan)
-        print(f"Total harga pesanan: Rp {total_harga}")
-    elif pilihan == "0":
-        break
-    else:
-        print("Pilihan tidak valid.")
+        pilihan = input("Masukkan pilihan: ")
 
-print("Terima kasih telah menggunakan program toko makanan.")
+        if pilihan == "1":
+            tampilkan_menu()
+        elif pilihan == "2":
+            tambahkan_menu()
+        elif pilihan == "3":
+            hapus_menu()
+        elif pilihan == "4":
+            update_harga()
+        elif pilihan == "5":
+            cari_menu()
+        elif pilihan == "6":
+            pesanan = input("Masukkan pesanan (pisahkan dengan koma): ").split(",")
+            total_harga = hitung_total_harga(pesanan)
+            print(f"Total harga pesanan: Rp {total_harga}")
+        elif pilihan == "0":
+            break
+        else:
+            print("Pilihan tidak valid.")
+
+    print("Terima kasih telah menggunakan program toko makanan.")
+

@@ -45,6 +45,14 @@ def delete_data():
 
 # Fungsi utama
 def main():
+    # Cek apakah database sudah ada
+    if 'mydatabase' not in client.list_database_names():
+        print("Database belum ada. Membuat database baru...")
+        db = client['mydatabase']
+        collection = db['mycollection']
+    else:
+        print("Database sudah ada.")
+
     while True:
         show_menu()
         choice = int(input("Pilih menu (1-5): "))

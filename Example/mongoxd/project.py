@@ -1,13 +1,14 @@
 import pymongo
 
-# Install pymongo package
-# Run this command in your terminal or command prompt
-# pip install pymongo
-
 # Connect to MongoDB
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["project_management"]
 projects_collection = db["projects"]
+
+# Check if the database already exists
+if "projects" not in db.list_collection_names():
+    # Create the projects collection
+    projects_collection = db.create_collection("projects")
 
 # CRUD operations
 def create_project():
